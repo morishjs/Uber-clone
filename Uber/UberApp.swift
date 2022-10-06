@@ -11,7 +11,17 @@ import SwiftUI
 struct UberApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack(alignment: .top) {
+                UberMapRepresentable()
+                    .ignoresSafeArea()
+                
+                LocationSearchActivationView()
+                    .padding(.top, 72)
+                
+                MapViewActionButton()
+                    .padding(.leading)
+                    .padding(.top, 4)
+            }
         }
     }
 }
