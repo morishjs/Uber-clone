@@ -9,14 +9,17 @@ import SwiftUI
 
 struct HomeView: View {
     @State var showLocationSearchView = false
+    @StateObject var viewModel = LocationSearchViewModel()
     
     var body: some View {
         ZStack(alignment: .top) {
             UberMapRepresentable()
                 .ignoresSafeArea()
+                .environmentObject(viewModel)
             
             if showLocationSearchView {
-                LocationSearchView()
+                LocationSearchView(showLocationSearchView: $showLocationSearchView)
+                    .environmentObject(viewModel)
             } else {
                 LocationSearchActivationView()
                     .padding(.top, 72)
