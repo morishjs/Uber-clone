@@ -16,7 +16,7 @@ struct UberMapRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        print("DEBUG: \(viewModel.selectedLocation)")
+        
     }
     
     func makeCoordinator() -> MapCoordinator {
