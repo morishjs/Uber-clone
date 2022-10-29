@@ -18,6 +18,8 @@
 		707EEB0128F055FF00E19548 /* LocationResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707EEB0028F055FF00E19548 /* LocationResultCell.swift */; };
 		707EEB0328F05BFC00E19548 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707EEB0228F05BFC00E19548 /* HomeView.swift */; };
 		709F388F28EAF634005963C4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F388E28EAF634005963C4 /* LocationManager.swift */; };
+		70A65AA8290022DD00A86BDD /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A65AA7290022DD00A86BDD /* RideRequestView.swift */; };
+		70E6AC5C28FBA8A2003C26EB /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6AC5B28FBA8A2003C26EB /* MapViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		707EEB0028F055FF00E19548 /* LocationResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResultCell.swift; sourceTree = "<group>"; };
 		707EEB0228F05BFC00E19548 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		709F388E28EAF634005963C4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		70A65AA7290022DD00A86BDD /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
+		70E6AC5B28FBA8A2003C26EB /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			children = (
 				704C156D28DEEC240076CC11 /* Views */,
 				704C156C28DEEC1B0076CC11 /* ViewModels */,
+				70E6AC5B28FBA8A2003C26EB /* MapViewState.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				7033B76C28EEFBBF004C4E3F /* LocationSearchView.swift */,
 				707EEB0028F055FF00E19548 /* LocationResultCell.swift */,
 				707EEB0228F05BFC00E19548 /* HomeView.swift */,
+				70A65AA7290022DD00A86BDD /* RideRequestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 				704B8B4828F11C6C003BFF1A /* LocationSearchViewModel.swift in Sources */,
 				704C157228DEEC9C0076CC11 /* UberMapRepresentable.swift in Sources */,
 				7033B76D28EEFBBF004C4E3F /* LocationSearchView.swift in Sources */,
+				70A65AA8290022DD00A86BDD /* RideRequestView.swift in Sources */,
+				70E6AC5C28FBA8A2003C26EB /* MapViewState.swift in Sources */,
 				70412D1728ECDBA200A5DF6F /* LocationSearchActivationView.swift in Sources */,
 				704C155A28DEEB0D0076CC11 /* UberApp.swift in Sources */,
 				707EEB0128F055FF00E19548 /* LocationResultCell.swift in Sources */,
