@@ -12,29 +12,37 @@ struct HomeView: View {
     @StateObject var viewModel = LocationSearchViewModel()
     
     var body: some View {
-        ZStack(alignment: .top) {
-            UberMapRepresentable(mapState: $mapViewState)
-                .ignoresSafeArea()
-                .environmentObject(viewModel)
-            
-            if mapViewState == .searching {
-                LocationSearchView(mapViewState: $mapViewState)
+        ZStack(alignment: .bottom) {
+            ZStack(alignment: .top) {
+                UberMapRepresentable(mapState: $mapViewState)
+                    .ignoresSafeArea()
                     .environmentObject(viewModel)
-            } else if mapViewState == .noInput {
-                LocationSearchActivationView()
-                    .padding(.top, 72)
-                    .onTapGesture {
-                        withAnimation {
-                            mapViewState = .searching
+                
+                if mapViewState == .searching {
+                    LocationSearchView(mapViewState: $mapViewState)
+                        .environmentObject(viewModel)
+                } else if mapViewState == .noInput {
+                    LocationSearchActivationView()
+                        .padding(.top, 72)
+                        .onTapGesture {
+                            withAnimation {
+                                mapViewState = .searching
+                            }
                         }
-                    }
+                }
+                
+                MapViewActionButton(mapViewState: $mapViewState)
+                    .environmentObject(viewModel)
+                    .padding(.leading)
+                    .padding(.top, 4)
             }
             
-            MapViewActionButton(mapViewState: $mapViewState)
-                .environmentObject(viewModel)
-                .padding(.leading)
-                .padding(.top, 4)
+            if mapViewState == .locationSelected {
+                RideRequestView()
+                    .transition(.move(edge: .bottom))
+            }
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 

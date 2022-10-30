@@ -75,6 +75,9 @@ extension UberMapRepresentable {
         func configurePolyline(withDestinationCoord coord: CLLocationCoordinate2D) {
             guard let userCoord = self.userLocationCoordinate else { return }
             getDestinationRoute(from: userCoord, dest: coord) { route in
+                let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect, edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
+                
+                self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
                 self.parent.mapView.addOverlay(route.polyline)
             }
         }
